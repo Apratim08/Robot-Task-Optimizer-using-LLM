@@ -1,0 +1,80 @@
+# Define table 1
+[world.table1.body]
+type = "box"
+size = [0.86, 1.78, 0.05]
+april-tags = [{id = 1, pose = {xy = [0.43, -0.6]}},
+              {id = 2, pose = {xy = [0.43, 0.6]}}]
+
+# Define table 2
+[world.table2.body]
+type = "box"
+size = [0.86, 1.78, 0.05]
+april-tags = [{id = 3, pose = {xy = [0.43, -0.6]}},
+              {id = 4, pose = {xy = [0.43, 0.6]}}]
+
+# Define a box
+[world.package1.body]
+type = "box"
+size = [0.32, 0.28, 0.3]
+mass = 0.1
+friction = [500,500,500]
+april-tags = [{id = 5, pose = {xyz = [0.16, 0.0, 0.0]}},
+              {id = 6, pose = {axyzd = [180, -0.16, 0.0, 0.0]}}]
+
+# Define a rubber
+[world.package2.body]
+type = "box"
+size = [0.32, 0.28, 0.3]
+mass = 0.1
+friction = [500,500,500]
+april-tags = [{id = 7, pose = {xyz = [0.16, 0.0, 0.0]}},
+              {id = 8, pose = {axyzd = [180, -0.16, 0.0, 0.0]}}]
+
+# Define a pencil
+[world.package3.body]
+type = "box"
+size = [0.32, 0.28, 0.3]
+mass = 0.1
+friction = [500,500,500]
+april-tags = [{id = 9, pose = {xyz = [0.16, 0.0, 0.0]}},
+              {id = 10, pose = {axyzd = [180, -0.16, 0.0, 0.0]}}]
+
+
+# Models in the scene
+[[model-list]]
+model = "robot"
+pose = {axyzd = [0, 1.5, 0, 1.0]}
+
+
+# First Table
+
+# Add table in front of the robot and rotate so the AprilTags are facing the robot.
+[[model-list]]
+model = "table1"
+pose = {rpyxyzd = [0, 0, 180, 3.0, 0, 0.6]}
+fixed = true
+color = "dimgray"
+
+# Add box on top of table in front of the robot.
+[[model-list]]
+model = "package1"
+pose = {rpyxyzd = [0, 0, 180, 3, -0.6, 1.3]}
+
+[[model-list]]
+model = "package2"
+pose = {rpyxyzd = [0, 0, 180, 3, 0.6, 1.3]}
+
+
+# Second Table
+
+
+# Add table in front of the robot and rotate so the AprilTags are facing the robot.
+[[model-list]]
+model = "table2"
+pose = {rpyxyzd = [0, 0, 0, 3, 3.5, 0.6]}
+fixed = true
+color = "saddlebrown"
+
+[[model-list]]
+model = "package3"
+pose = {rpyxyzd = [0, 0, 180, 3.1, 3.5, 1.3]}

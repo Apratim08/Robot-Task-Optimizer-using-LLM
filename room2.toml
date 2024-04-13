@@ -1,0 +1,65 @@
+# Define table
+[world.table.body]
+type = "box"
+size = [0.75, 1.4, 0.05]
+april-tags = [{id = 1, pose = {xyz = [0.375, -0.6, 0]}},
+              {id = 2, pose = {xyz = [0.375, 0.6, 0]}}]
+
+# Define tea
+[world.tea.body]
+type = "box"
+size = [0.3, 0.3, 0.3]
+mass = 0.1
+friction = [2,2,2]
+april-tags = [{id = 5, pose = {xyz = [0.15, 0.0, 0.0]}},
+              {id = 6, pose = {axyzd = [180, -0.15, 0.0, 0.0]}}]
+
+# Define boxes
+[world.box.body]
+type = "box"
+size = [0.3, 0.3, 0.3]
+mass = 0.1
+friction = [10,10,10]
+april-tags = [{id = 7, pose = {xyz = [0.15, 0.0, 0.0]}},
+              {id = 8, pose = {axyzd = [180, -0.15, 0.0, 0.0]}}]
+
+
+# Models in the scene
+
+[[model-list]]
+model = "robot"
+pose = {axyzd = [0, 0.5, 0, 1.0]}
+
+# Table 1
+[[model-list]]
+model = "table"
+pose = {rpyxyzd = [0, 0, 180, 2.375, 0, 0.76]}
+fixed = true
+color = "saddlebrown"
+
+# Table 2
+[[model-list]]
+model = "table"
+pose = {rpyxyzd = [0, 0, 180, 2.375, 2.4, 0.76]}
+fixed = true
+color = "saddlebrown"
+april-tag-id-offset = 10
+
+# Table 3
+[[model-list]]
+model = "table"
+pose = {rpyxyzd = [0, 0, 180, 2.375, 4.8, 0.76]}
+fixed = true
+color = "saddlebrown"
+april-tag-id-offset = 20
+
+
+[[model-list]]
+model = "tea"
+pose = {rpyxyzd = [0, 0, 0, 2.25, 2.4, 0.935]}
+color = "darkgreen"
+
+[[model-list]]
+model = "box"
+pose = {rpyxyzd = [0, 0, 0, 2.25, 0, 0.935]}
+color = "red"
