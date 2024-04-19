@@ -181,7 +181,7 @@ Our experiment illustrates that the application of a post- optimization method s
 
 The current framework exhibits several limitations. Firstly, it comes out when handling tasks with constraints. Specifi- cally, our framework lacks a clear mechanism to determine if tasks are redundant or if they are left unaddressed due to constraints within the tasks. An illustrative example would be the tasks requiring the swapping of two tables’ positions, compounded by a constraint that restricts the maximum number of items permissible on a table. Sometimes, it may be necessary to move items to another table to mitigate this constraint. However, from our experiments, such actions might be treated as redundant tasks.
 
-Another major limitation is the speed of inference in hierarchical LLMs, due to the extra steps compared with direct LLM outputs. Typically, robots spend some time for- mulating subsequent plans prior to action execution, which is generally acceptable. However, given that our framework supports task optimization during operational phases, the delay in awaiting further action outputs from the robot could present operational challenges.
+Another major limitation is the speed of inference in hierarchical LLMs, due to the extra steps compared with direct LLM outputs. Typically, robots spend some time for- mulating subsequent plans prior to action execution, which is generally acceptable. However, given that our framework supports task optimization during operational phases, the delay in awaiting further action outputs from the robot could present operational challenges.
 
 ## 5. CONCLUSION
 
